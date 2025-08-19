@@ -1,41 +1,91 @@
+// Mobile Menu Js
+document.addEventListener("DOMContentLoaded", function () {
+  var trigger = document.querySelector(".canva-cart");
+  var closeBtn = document.querySelector(".close-btn");
+  var toggleClass = "cart-expanded";
+
+  // Open
+  if (trigger) {
+    trigger.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.body.classList.add(toggleClass);
+    });
+  }
+
+  // Close
+  if (closeBtn) {
+    closeBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.body.classList.remove(toggleClass);
+    });
+  }
+});
+
+// Header Sticky Js
+document.addEventListener("DOMContentLoaded", function () {
+  var header = document.querySelector(".header-sticky");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 0) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  });
+});
 
 // Cart Js
 document.addEventListener("DOMContentLoaded", function () {
-  function toggleBodyClassAfterLoad(triggerSelector, overlaySelector, toggleClass) {
-    var triggers = document.querySelectorAll(triggerSelector);
-    var closeEls = document.querySelectorAll(triggerSelector + ", " + overlaySelector);
+	const cartList = document.querySelector(".build-list");
+	const itemTemplate = document.querySelector(
+		".build-list-item-template .build-list-item"
+	);
+		const summaryNumber1 = document.querySelector(".select-number");
+		const summaryNumber2 = document.querySelector(".select-number2");
 
-    if (triggers.length) {
-      triggers.forEach(function (el) {
-        el.addEventListener("click", function (e) {
-          e.preventDefault();
+		let itemCount = 0;
 
-          // Show loading spinner (optional)
-          el.classList.add('loading');
-          el.disabled = true;
-
-          // Simulate loading delay (e.g., API call or animation)
-          setTimeout(function () {
-            document.body.classList.add(toggleClass); // only add (not toggle)
-            el.classList.remove('loading');
-            el.disabled = false;
-          }, 1200); // loading time in ms
-        });
-      });
-
-      // Close on overlay click
-      var overlayEl = document.querySelector(overlaySelector);
-      if (overlayEl) {
-        overlayEl.addEventListener("click", function (e) {
-          e.preventDefault();
-          document.body.classList.remove(toggleClass);
-        });
+		function updateSummary() {
+			if (summaryNumber1) {
+				summaryNumber1.textContent =
+					itemCount === 1 ? "(1 item)" : `(${itemCount} items)`;
+			}
+      if (summaryNumber2) {
+          summaryNumber2.textContent = `${itemCount} items`;
       }
-    }
-  }
-  toggleBodyClassAfterLoad(".cart-expander", "#cart-overly", "cart-expanded");
-});
+		}
 
+	document.querySelectorAll(".primary-btn").forEach(function (addButton) {
+		addButton.addEventListener("click", function () {
+			addButton.classList.add("loading");
+			addButton.disabled = true;
+
+			setTimeout(function () {
+				const newItem = itemTemplate.cloneNode(true);
+				cartList.appendChild(newItem);
+				itemCount++;
+				updateSummary();
+				console.log("Item added");
+
+				addButton.classList.remove("loading");
+				addButton.disabled = false;
+			}, 1000);
+		});
+	});
+
+	cartList.addEventListener("click", function (e) {
+		const removeButton = e.target.closest(".remove-btn");
+		if (removeButton) {
+			const item = removeButton.closest(".build-list-item");
+			if (item) {
+				item.remove();
+				itemCount = Math.max(0, itemCount - 1);
+				updateSummary();
+				console.log("Item removed");
+			}
+		}
+	});
+});
 
 // Tabs JS
 document.addEventListener("DOMContentLoaded", function () {
