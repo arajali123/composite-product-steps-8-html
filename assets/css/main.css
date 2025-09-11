@@ -297,7 +297,7 @@ ul {
 }
 
 .page-width {
-  max-width: 1220px;
+  max-width: 1620px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -306,102 +306,34 @@ ul {
 }
 
 /* Button CSS */
-.primary-cart-btn {
-  display: block;
-  font-size: 15px;
-  width: 100%;
-  color: #fff;
-  background: #B9927A;
-  border: none;
-  position: relative;
-  padding: 14px 15px;
-  height: 43px;
-  line-height: 1;
-}
-
-.primary-cart-btn .btn-loading {
-  width: 15px;
-  height: 15px;
-  border: 2px solid #ffffff;
-  border-top: 2px solid transparent;
-  border-radius: 50%;
-  animation: spin 0.9s linear infinite;
-  display: none;
-}
-
-.primary-cart-btn .btn-text {
+.reload-btn {
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-.primary-cart-btn.loading .btn-text {
-  display: none;
-}
-
-.primary-cart-btn.loading .btn-loading {
-  display: inline-block;
-}
-
-.primary-cart-btn:hover {
-  background-color: #8b7161;
-}
-
-.cart-add-btn {
-  display: inline-block;
-  color: #ffffff;
+  gap: 8px;
   font-size: 15px;
+  color: #ffffff;
   font-weight: 400;
-  background: #12121299;
-  padding: 16px 25px;
+  background: #303030;
+  padding: 11px 125px;
   line-height: 1;
 }
 
-.cart-add-btn:hover {
-  color: #ffffff;
-  background-color: #121212;
-}
-
-.price-edit-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
+.add-btn {
+  display: inline-block;
+  font-size: 15px;
   color: #121212;
-  font-size: 12px;
-  line-height: 18px;
-  width: 100%;
-}
-
-.price-edit-btn span {
-  display: flex;
-}
-
-.buy-now-btn {
-  display: inline-block;
-  color: #ffffff;
   font-weight: 400;
-  font-size: 15px;
-  background: #FB9274;
-  padding: 17px 95px;
-  line-height: 1;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+  background: #FFEBE0;
+  text-align: center;
+  padding: 15px 25px;
+  width: 100%;
 }
 
 /**----------------------------------------
 START: Header CSS
 ----------------------------------------*/
 
-.header-skincare-essentials-area {
+.header-mountain-area {
   position: relative;
   background-color: #ffffff;
   box-shadow: 0px 2px 2px 0px #00000012;
@@ -410,7 +342,7 @@ START: Header CSS
   z-index: 98;
 }
 
-.header-skincare-essentials-menu-wrapper {
+.header-mountain-menu-wrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -504,197 +436,89 @@ START: Skincare Essentials CSS
 .tabs-skincare-essentials-section {
   position: relative;
   padding-top: 54px;
-  overflow-x: hidden;
-  overflow-y: auto;
+  padding-bottom: 64px;
+  overflow: hidden;
 }
 
-.tabs-skincare-essentials-section .heading-area {
-  text-align: center;
-}
-
-.tabs-skincare-essentials-section .heading-area .tabs-skincare-essentials-subtitle {
-  display: block;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  margin-bottom: 10px;
-}
-
-.tabs-skincare-essentials-menu {
+.tabs-mountain-menu {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin-top: 22px;
-  margin-bottom: 34px;
+  margin-bottom: 20px;
 }
 
-.tabs-skincare-essentials-menu li .tab-button {
+.tabs-mountain-menu li .tab-button {
+  display: inline-block;
   position: relative;
+  font-size: 15px;
+  padding: 12px 30px;
   background-color: #FFEBE0;
   clip-path: polygon(85% 0, 100% 50%, 85% 100%, 0% 100%, 15% 50%, 0% 0%);
   font-family: var(--sds-ff-heading);
-  margin-left: -20px;
+  text-align: center;
+  width: 176px;
+  margin-left: -22px;
 }
 
-.tabs-skincare-essentials-menu li:first-child .tab-button {
-  margin-left: 0;
+.tabs-mountain-menu li:nth-child(2) .tab-button {
+  clip-path: polygon(85% 0, 100% 50%, 85% 100%, 0% 100%, 0% 0%, 0% 0%);
 }
 
-.tabs-skincare-essentials-menu li .tab-button.active {
+.tabs-mountain-menu li:last-child .tab-button {
+  clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 15% 50%, 0% 0%);
+}
+
+.tabs-mountain-menu li .tab-button.active {
   color: #ffffff;
-  background-color: #E09A73;
+  background-color: #FF8542;
 }
 
-.tabs-skincare-essentials-menu li .tab-button.active::after {
+.tabs-mountain-menu li .tab-button.active::after {
   border-left: 20px solid #E09A73;
   border-top: 22px solid transparent;
   border-bottom: 22px solid transparent;
 }
 
-.tabs-skincare-essentials-menu li a {
-  display: inline-block;
-  font-size: 15px;
-  padding: 12px 55px;
-}
-
-.tabs-skincare-essentials-main-wrapper .tabs-skincare-essentials-main-wrap {
+.tabs-mountain-main-wrapper .tabs-mountain-main-wrap {
   display: none;
 }
 
-.tabs-skincare-essentials-main-wrapper div.active {
+.tabs-mountain-main-wrapper div.active {
   display: block;
 }
 
-.tabs-skincare-essentials-main-wrap.preview-main-wrap {
-  padding-bottom: 164px;
-}
-
-.tabs-skincare-essentials-main-wrap .tabs-content-wrap .tabs-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(18, 18, 18, 0.1);
-  padding-bottom: 14px;
-}
-
-.tabs-skincare-essentials-main-wrap .tabs-content-wrap .tabs-header .tabs-title {
-  width: calc(100% - 100px);
-  line-height: 24px;
-}
-
-.tabs-skincare-essentials-main-wrap .tabs-content-wrap .tabs-header .subtitle {
-  display: block;
-  font-weight: 500;
-  line-height: 20px;
-}
-
-.tabs-skincare-essentials-main-wrap .tabs-content-wrap .skincare-essentials-desc {
-  display: block;
-  margin-top: 14px;
-  line-height: 20px;
-  max-width: 530px;
-  width: 100%;
-}
-
-.tabs-skincare-essentials-main-wrap .tabs-review-wrap {
-  text-align: center;
-}
-
-.tabs-skincare-essentials-main-wrap .tabs-review-wrap .tabs-header .subtitle {
-  display: block;
-  font-weight: 400;
-  font-size: 16px;
-  margin-bottom: 15px;
-  line-height: 24px;
-}
-
-.tabs-skincare-essentials-main-wrap .total-price-wrap {
-  margin-top: 35px;
-  text-align: center;
-}
-
-.tabs-skincare-essentials-main-wrap .total-price-wrap .subtitle {
-  display: block;
-  color: #303030;
-  font-weight: 400;
-  font-size: 16px;
-  margin-bottom: 14px;
-  line-height: 24px;
-}
-
-.tabs-skincare-essentials-main-wrap .total-price-wrap .total-price {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-size: 24px;
-  font-family: var(--sds-ff-heading);
-  font-weight: 700;
-  line-height: 24px;
-}
-
-.tabs-skincare-essentials-main-wrap .total-price-wrap .total-price .discount {
-  color: #121212;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 24px;
-}
-
-.tabs-skincare-essentials-main-wrap .total-price-wrap .total-price .save {
-  color: #27A553;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.tabs-skincare-essentials-main-wrap .total-price-wrap .buy-now-btn {
-  margin-top: 29px;
-}
-
-.tabs-skincare-essentials-item-wrap {
+.tabs-mountain-item-wrap {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 20px;
-  row-gap: 24px;
-  margin-top: 34px;
-  padding-bottom: 164px;
+  row-gap: 30px;
 }
 
-.tabs-skincare-essentials-item-wrap.preview-item-wrap {
-  padding-bottom: 0;
-}
-
-.tabs-skincare-essentials-item {
-  padding: 20px 20px 22px;
-  border: 1px solid #00000033;
+.tabs-mountain-item {
+  position: relative;
+  border: 1px solid transparent;
+  padding: 12px 10px 10px;
   transition: all 0.3s ease-in-out 0s;
+  overflow: hidden;
 }
 
-.tabs-skincare-essentials-item:hover {
-  border-color: #000000;
+.tabs-mountain-item .tabs-mountain-images {
+  margin-bottom: 13px;
 }
 
-.tabs-skincare-essentials-item .tabs-skincare-essentials-images {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.tabs-skincare-essentials-item .tabs-skincare-essentials-images a {
+.tabs-mountain-item .tabs-mountain-images a {
   display: inline-flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
 }
 
-.tabs-skincare-essentials-item .tabs-skincare-essentials-images a img {
+.tabs-mountain-item .tabs-mountain-images a img {
   width: 100%;
 }
 
-.tabs-skincare-essentials-item .tabs-skincare-essentials-images a .second-images {
+.tabs-mountain-item .tabs-mountain-images a .second-images {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -709,380 +533,98 @@ START: Skincare Essentials CSS
   overflow: hidden;
 }
 
-.tabs-skincare-essentials-item:hover .tabs-skincare-essentials-images a .second-images {
+.tabs-mountain-item .tabs-mountain-content .mountain-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.tabs-mountain-item .tabs-mountain-content .mountain-price {
+  display: block;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 9px;
+  line-height: 30px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.tabs-mountain-item .tabs-mountain-content .tabs-mountain-list table tbody tr td {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.tabs-mountain-item .tabs-mountain-content .tabs-mountain-list table tbody tr td span {
+  font-weight: 400;
+  padding-left: 20px;
+}
+
+.tabs-mountain-item .tabs-mountain-content .add-btn {
+  margin-top: 17px;
+}
+
+.tabs-mountain-item .tabs-mountain-content .hide-text {
+  transform: translateY(250px);
+  transition: all 0.3s ease-in-out 0s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tabs-mountain-item:hover {
+  border-color: #FF8542;
+  box-shadow: 0px 14px 30px 0px #0000001C;
+}
+
+.tabs-mountain-item:hover .tabs-mountain-images a .second-images {
   transform: scale(1);
   opacity: 1;
   visibility: visible;
 }
 
-.tabs-skincare-essentials-item .tabs-skincare-essentials-content .tabs-skincare-essentials-header {
-  padding-top: 20px;
-  padding-bottom: 15px;
+.tabs-mountain-item:hover .tabs-mountain-content .hide-text {
+  transform: translateY(0px);
+  opacity: 1;
+  visibility: visible;
 }
 
-.tabs-skincare-essentials-item .tabs-skincare-essentials-content .tabs-skincare-essentials-title {
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 20px;
+.tabs-mountain-item:hover .tabs-mountain-content .mountain-price {
+  color: #E15A0F;
 }
 
-.tabs-skincare-essentials-item .tabs-skincare-essentials-content .tabs-skincare-essentials-title a:hover {
-  color: #B9927A;
+.tabs-mountain-item .tabs-mountain-content .mountain-title a:hover {
+  color: #E15A0F;
 }
 
-.tabs-skincare-essentials-item .tabs-skincare-essentials-content .tabs-skincare-essentials-price {
-  display: block;
-  font-weight: 600;
-  font-size: 16px;
-  margin-top: 5px;
-  line-height: 24px;
-}
-
-.tabs-skincare-essentials-item.style-2 {
-  padding: 0;
-  border: none;
-  text-align: center;
-}
-
-.tabs-skincare-essentials-item.style-2 .tabs-skincare-essentials-content .tabs-skincare-essentials-header .price-edit-btn {
-  margin-top: 14px;
-}
-
-.tabs-skincare-essentials-infos {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.tabs-skincare-essentials-select {
-  position: relative;
-}
-
-.tabs-skincare-essentials-select .select-selected {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  column-gap: 6px;
-  background: #ffffff;
-  border: 1px solid #0000001A;
-  padding: 7px 14px;
-  cursor: pointer;
-}
-
-.tabs-skincare-essentials-select .select-selected span {
-  font-size: 15px;
-  line-height: 20px;
-}
-
-.tabs-skincare-essentials-select .tabs-skincare-essentials-select-item {
-  position: absolute;
-  top: 105%;
-  left: 0;
-  right: 0;
-  background: #ffffff;
-  border: 1px solid #0000001A;
-  z-index: 99;
-  display: none;
-  max-height: 150px;
-  overflow-y: auto;
-}
-
-.tabs-skincare-essentials-select .tabs-skincare-essentials-select-item div {
-  font-size: 15px;
-  padding: 10px 14px;
-  transition: background 0.2s;
-  cursor: pointer;
-}
-
-.tabs-skincare-essentials-select .tabs-skincare-essentials-select-item div:hover {
-  background: #f0f0f0;
-}
-
-.tabs-skincare-essentials-select.active .tabs-skincare-essentials-select-item {
-  display: block;
-  animation: fadeIn 0.2s ease-in-out;
-}
-
-.tabs-skincare-essentials-select .arrow {
-  position: relative;
-  top: -2px;
-  border: 1px solid #000000;
-  border-width: 0 1px 1px 0;
-  padding: 4px;
-  transform: rotate(45deg);
-  transition: transform 0.2s;
-}
-
-.tabs-skincare-essentials-select.active .arrow {
-  transform: rotate(-135deg);
-}
-
-
-.skincare-essentials-counter .counter {
-  display: none;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #0000001A;
-  gap: 10px;
-}
-
-.skincare-essentials-counter .counter button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 37px;
-  height: 41px;
-  padding: 6px 10px;
-  font-size: 16px;
-  color: #121212;
-  background: #ffffff;
-  border-right: 1px solid #0000001A;
-  cursor: pointer;
-}
-
-.skincare-essentials-counter .counter button:last-child {
-  border-left: 1px solid #0000001A;
-  border-right: none;
-}
-
-.skincare-essentials-counter .counter span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  font-size: 15px;
-  text-align: center;
-}
-
-.skincare-essentials-cart-bottom {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 110px;
-  column-gap: 25px;
-  row-gap: 15px;
-  background: #ffffff;
-  box-shadow: 0px -4px 14px 0px #8484840F;
-  padding: 17px 40px;
-  z-index: 3;
-}
-
-.skincare-essentials-add-wrap .skincare-essentials-add-item {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 14px;
-}
-
-.skincare-essentials-add-wrap .skincare-essentials-add-item .add-items {
-  display: flex;
-  position: relative;
-  max-width: 76px;
-  width: 100%;
-  display: none;
-}
-
-.skincare-essentials-add-wrap .skincare-essentials-add-item .add-items img {
-  width: 100%;
-}
-
-.skincare-essentials-add-wrap .skincare-essentials-add-item .add-items .close-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  position: absolute;
-  top: -9px;
-  right: -9px;
-  background: #FF0000;
-  border-radius: 50%;
-  transform: scale(0);
-}
-
-.skincare-essentials-add-wrap .skincare-essentials-add-item .add-items:hover .close-icon {
-  transform: scale(1);
-}
-
-.skincare-essentials-cart-infos {
-  display: flex;
-  align-items: center;
-}
-
-.skincare-essentials-cart-infos .cart-add-button {
-  display: flex;
-  align-items: center;
-  column-gap: 6px;
-  border-left: 1px solid rgba(48, 48, 48, 0.4);
-  padding-left: 38px;
-}
-
-.skincare-essentials-cart-infos .cart-add-price {
-  display: flex;
-  flex-direction: column;
-  padding-right: 28px;
-}
-
-.skincare-essentials-cart-infos .cart-add-price .select-price {
-  display: block;
-  font-size: 13px;
-  color: #303030;
-  margin-bottom: 2px;
-  line-height: 24px;
-}
-
-.skincare-essentials-cart-infos .cart-add-price .total-price {
-  display: flex;
-  align-items: center;
-  column-gap: 8px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.skincare-essentials-cart-infos .cart-add-price .total-price .price-discount {
-  display: inline-block;
-  position: relative;
-  font-size: 16px;
-  color: #121212;
-  font-weight: 400;
-}
-
-.skincare-essentials-cart-infos .cart-add-price .total-price .price-discount::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 1px;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #121212;
-}
-
-.tabs-skincare-essentials-item:nth-child(1) {
+.tabs-mountain-item:nth-child(1) {
   animation: anim-1 0.3s ease-in-out 0s;
 }
 
-.tabs-skincare-essentials-item:nth-child(2) {
+.tabs-mountain-item:nth-child(2) {
   animation: anim-2 0.5s ease-in-out 0s;
 }
 
-.tabs-skincare-essentials-item:nth-child(3) {
+.tabs-mountain-item:nth-child(3) {
   animation: anim-3 0.7s ease-in-out 0s;
 }
 
-.tabs-skincare-essentials-item:nth-child(4) {
+.tabs-mountain-item:nth-child(4) {
   animation: anim-4 0.9s ease-in-out 0s;
 }
 
-.tabs-skincare-essentials-item:nth-child(5) {
+.tabs-mountain-item:nth-child(5) {
   animation: anim-5 0.3s ease-in-out 0s;
 }
 
-.tabs-skincare-essentials-item:nth-child(6) {
+.tabs-mountain-item:nth-child(6) {
   animation: anim-6 0.5s ease-in-out 0s;
 }
 
-.tabs-skincare-essentials-item:nth-child(7) {
+.tabs-mountain-item:nth-child(7) {
   animation: anim-7 0.7s ease-in-out 0s;
 }
 
-.tabs-skincare-essentials-item:nth-child(8) {
+.tabs-mountain-item:nth-child(8) {
   animation: anim-8 0.9s ease-in-out 0s;
-}
-
-@media (max-width: 991px) {
-  .tabs-skincare-essentials-item-wrap {
-    grid-template-columns: repeat(3, 1fr);
-    padding-bottom: 234px;
-  }
-
-  .tabs-skincare-essentials-main-wrap.preview-main-wrap {
-    padding-bottom: 84px;
-  }
-
-  .skincare-essentials-cart-bottom {
-    flex-direction: column;
-    height: 180px;
-  }
-}
-
-@media (max-width: 767px) {
-  .tabs-skincare-essentials-item-wrap {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .tabs-skincare-essentials-menu {
-    white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    flex-wrap: inherit;
-    justify-content: start;
-    scrollbar-color: rgba(18, 18, 18, 0.2) rgba(18, 18, 18, 0.2);
-    scrollbar-width: thin;
-  }
-}
-
-@media (max-width: 575px) {
-  .tabs-skincare-essentials-item-wrap {
-    grid-template-columns: repeat(2, 1fr);
-    padding-bottom: 214px;
-  }
-
-  .tabs-skincare-essentials-main-wrap.preview-main-wrap {
-    padding-bottom: 54px;
-  }
-
-  .tabs-skincare-essentials-main-wrap .total-price-wrap {
-    margin-top: 24px;
-  }
-
-  .skincare-essentials-cart-bottom {
-    padding: 16px 15px;
-    height: 160px;
-  }
-
-  .skincare-essentials-cart-infos .cart-add-button {
-    padding-left: 15px;
-  }
-
-  .skincare-essentials-cart-infos .cart-add-price {
-    padding-right: 15px;
-  }
-
-  .skincare-essentials-add-wrap .skincare-essentials-add-item .add-items {
-    max-width: 50px;
-  }
-
-  .tabs-skincare-essentials-item {
-    padding: 20px 15px;
-  }
-
-  .tabs-skincare-essentials-select .tabs-skincare-essentials-select-item div,
-  .tabs-skincare-essentials-select .select-selected span {
-    font-size: 14px;
-  }
-
-  .tabs-skincare-essentials-select .tabs-skincare-essentials-select-item div,
-  .tabs-skincare-essentials-select .select-selected {
-    padding: 7px 12px;
-  }
-
-  .skincare-essentials-add-wrap .skincare-essentials-add-item {
-    gap: 10px;
-  }
-
-  .cart-add-btn {
-    font-size: 14px;
-    padding: 14px 18px;
-  }
 }
 
 @keyframes fadeIn {
