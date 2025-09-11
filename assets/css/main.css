@@ -442,11 +442,16 @@ START: Skincare Essentials CSS
 
 .tabs-mountain-menu {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   margin-top: 22px;
   margin-bottom: 20px;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-color: #FF8542 #FFEBE0;
+  padding-bottom: 6px;
+  scrollbar-width: thin;
 }
 
 .tabs-mountain-menu li .tab-button {
