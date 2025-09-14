@@ -435,7 +435,6 @@ START: Skincare Essentials CSS
 ----------------------------------------*/
 .tabs-skincare-essentials-section {
   position: relative;
-  padding-top: 54px;
   padding-bottom: 64px;
   overflow: hidden;
 }
@@ -444,14 +443,14 @@ START: Skincare Essentials CSS
   display: flex;
   align-items: center;
   justify-content: start;
-  margin-top: 22px;
   margin-bottom: 20px;
   white-space: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
-  scrollbar-color: #FF8542 #FFEBE0;
+  scrollbar-color: #ffffff #ffffff;
   padding-bottom: 6px;
   scrollbar-width: thin;
+  border-top: 2px solid #ffffff;
 }
 
 .tabs-mountain-menu li .tab-button {
@@ -498,6 +497,13 @@ START: Skincare Essentials CSS
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 30px;
+}
+
+.tabs-mountain-item-wrap.preview-wrap {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 20px;
+  row-gap: 32px;
 }
 
 .tabs-mountain-item {
@@ -600,6 +606,81 @@ START: Skincare Essentials CSS
   color: #E15A0F;
 }
 
+.tabs-mountain-item.style-2 {
+  border: none;
+  padding: 0px;
+  box-shadow: none;
+}
+
+.tabs-mountain-item.style-2:hover .tabs-mountain-content .mountain-price {
+  color: #000000;
+}
+
+.mountain-top-wrap {
+  display: flex;
+}
+
+.mountain-top-wrap .mountain-main-images {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(97.27deg, #F0F0F0 0.36%, #D5D2D2 94.3%);
+  padding: 97px 25px 96px;
+  width: 100%;
+}
+
+.mountain-cart-wrap {
+  max-width: 380px;
+  width: 100%;
+}
+
+.mountain-cart-wrap .mountain-cart-add-box {
+  padding: 20px 0px 20px 20px;
+}
+
+.mountain-cart-wrap .select-title {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  border-bottom: 2px solid #E5E5E5;
+  padding: 22px 20px;
+}
+
+.mountain-cart-wrap .select-title .select-number {
+  font-size: 16px;
+  color: #121212;
+  font-weight: 400;
+}
+
+.mountain-cart-wrap .mountain-cart-infos .mountain-cart-wrap {
+  display: flex;
+  background: #F8F8F8;
+}
+
+.mountain-cart-wrap .mountain-cart-infos .mountain-cart-wrap .mountain-cart-price .price-title {
+  display: block;
+  font-size: 15px;
+  color: #303030;
+  line-height: 22px;
+}
+
+.mountain-cart-wrap .mountain-cart-infos .mountain-cart-wrap .mountain-cart-price {
+  border-right: 1px solid #EAEAEA;
+  padding: 14px 58px 14px 58px;
+}
+
+.mountain-cart-wrap .mountain-cart-infos .mountain-cart-wrap .mountain-cart-price:last-child {
+  border-right: none;
+  padding: 14px 0px 14px 58px;
+}
+
+.mountain-cart-wrap .mountain-cart-infos .mountain-cart-wrap .mountain-cart-price .price-number {
+  color: #121212;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
 .tabs-mountain-item:nth-child(1) {
   animation: anim-1 0.3s ease-in-out 0s;
 }
@@ -617,19 +698,35 @@ START: Skincare Essentials CSS
 }
 
 .tabs-mountain-item:nth-child(5) {
-  animation: anim-5 0.3s ease-in-out 0s;
+  animation: anim-5 1.3s ease-in-out 0s;
 }
 
 .tabs-mountain-item:nth-child(6) {
-  animation: anim-6 0.5s ease-in-out 0s;
+  animation: anim-6 1.5s ease-in-out 0s;
 }
 
 .tabs-mountain-item:nth-child(7) {
-  animation: anim-7 0.7s ease-in-out 0s;
+  animation: anim-7 0.3s ease-in-out 0s;
 }
 
 .tabs-mountain-item:nth-child(8) {
-  animation: anim-8 0.9s ease-in-out 0s;
+  animation: anim-8 0.5s ease-in-out 0s;
+}
+
+.tabs-mountain-item:nth-child(9) {
+  animation: anim-9 0.7s ease-in-out 0s;
+}
+
+.tabs-mountain-item:nth-child(10) {
+  animation: anim-10 0.9s ease-in-out 0s;
+}
+
+.tabs-mountain-item:nth-child(11) {
+  animation: anim-11 1.3s ease-in-out 0s;
+}
+
+.tabs-mountain-item:nth-child(12) {
+  animation: anim-12 1.5s ease-in-out 0s;
 }
 
 @keyframes fadeIn {
@@ -696,7 +793,7 @@ START: Skincare Essentials CSS
 @keyframes anim-5 {
   0% {
     opacity: 0;
-    transform: translateY(1rem);
+    transform: translateY(5rem);
   }
 
   100% {
@@ -708,7 +805,7 @@ START: Skincare Essentials CSS
 @keyframes anim-6 {
   0% {
     opacity: 0;
-    transform: translateY(2rem);
+    transform: translateY(6rem);
   }
 
   100% {
@@ -720,7 +817,7 @@ START: Skincare Essentials CSS
 @keyframes anim-7 {
   0% {
     opacity: 0;
-    transform: translateY(3rem);
+    transform: translateY(1rem);
   }
 
   100% {
@@ -732,7 +829,55 @@ START: Skincare Essentials CSS
 @keyframes anim-8 {
   0% {
     opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes anim-9 {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes anim-10 {
+  0% {
+    opacity: 0;
     transform: translateY(4rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes anim-11 {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes anim-12 {
+  0% {
+    opacity: 0;
+    transform: translateY(6rem);
   }
 
   100% {
