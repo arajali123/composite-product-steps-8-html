@@ -338,7 +338,7 @@ ul {
   background: #EAEAEA;
   font-size: 16px;
   font-weight: 400;
-  padding: 20px 25px;
+  padding: 22px 25px;
   width: 100%;
   line-height: 1;
 }
@@ -451,7 +451,7 @@ START: Header CSS
 /**----------------------------------------
 START: Skincare Essentials CSS
 ----------------------------------------*/
-.tabs-skincare-essentials-section {
+.tabs-mountain-section {
   position: relative;
   padding-bottom: 64px;
   overflow: hidden;
@@ -486,6 +486,7 @@ START: Skincare Essentials CSS
 
 .tabs-mountain-menu li:nth-child(2) .tab-button {
   clip-path: polygon(85% 0, 100% 50%, 85% 100%, 0% 100%, 0% 0%, 0% 0%);
+  margin-left: 0px;
 }
 
 .tabs-mountain-menu li:last-child .tab-button {
@@ -577,13 +578,13 @@ START: Skincare Essentials CSS
   transition: all 0.3s ease-in-out 0s;
 }
 
-.tabs-mountain-item .tabs-mountain-content .tabs-mountain-list table tbody tr td {
+.tabs-mountain-item .tabs-mountain-content .tabs-mountain-list tbody tr td {
   font-weight: 600;
   font-size: 15px;
   line-height: 25px;
 }
 
-.tabs-mountain-item .tabs-mountain-content .tabs-mountain-list table tbody tr td span {
+.tabs-mountain-item .tabs-mountain-content .tabs-mountain-list tbody tr td span {
   font-weight: 400;
   padding-left: 20px;
 }
@@ -628,6 +629,7 @@ START: Skincare Essentials CSS
   border: none;
   padding: 0px;
   box-shadow: none;
+  overflow: visible;
 }
 
 .tabs-mountain-item.style-2:hover .tabs-mountain-content .mountain-price {
@@ -647,16 +649,16 @@ START: Skincare Essentials CSS
   width: 100%;
 }
 
-.mountain-cart-wrap {
+.mountain-cart-sidebar {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  position: relative;
   max-width: 380px;
   width: 100%;
+  overflow: hidden;
 }
 
-.mountain-cart-wrap .mountain-cart-add-box {
-  padding: 20px 0px 20px 20px;
-}
-
-.mountain-cart-wrap .select-title {
+.mountain-cart-sidebar .select-title {
   display: flex;
   align-items: center;
   column-gap: 12px;
@@ -664,35 +666,43 @@ START: Skincare Essentials CSS
   padding: 22px 20px;
 }
 
-.mountain-cart-wrap .select-title .select-number {
+.mountain-cart-sidebar .mountain-cart-add-box {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: auto;
+  gap: 10px;
+  padding: 20px 0px 20px 20px;
+}
+
+.mountain-cart-sidebar .select-title .select-number {
   font-size: 16px;
   color: #121212;
   font-weight: 400;
 }
 
-.mountain-cart-wrap .mountain-cart-infos .mountain-cart-wrap {
+.mountain-cart-sidebar .mountain-cart-infos .mountain-cart-wrap {
   display: flex;
   background: #F8F8F8;
 }
 
-.mountain-cart-wrap .mountain-cart-infos .mountain-cart-wrap .mountain-cart-price .price-title {
+.mountain-cart-sidebar .mountain-cart-infos .mountain-cart-wrap .mountain-cart-price .price-title {
   display: block;
   font-size: 15px;
   color: #303030;
   line-height: 22px;
 }
 
-.mountain-cart-wrap .mountain-cart-infos .mountain-cart-wrap .mountain-cart-price {
+.mountain-cart-sidebar .mountain-cart-infos .mountain-cart-wrap .mountain-cart-price {
   border-right: 1px solid #EAEAEA;
   padding: 14px 58px 14px 58px;
 }
 
-.mountain-cart-wrap .mountain-cart-infos .mountain-cart-wrap .mountain-cart-price:last-child {
+.mountain-cart-sidebar .mountain-cart-infos .mountain-cart-wrap .mountain-cart-price:last-child {
   border-right: none;
   padding: 14px 0px 14px 58px;
 }
 
-.mountain-cart-wrap .mountain-cart-infos .mountain-cart-wrap .mountain-cart-price .price-number {
+.mountain-cart-sidebar .mountain-cart-infos .mountain-cart-wrap .mountain-cart-price .price-number {
   color: #121212;
   font-size: 18px;
   font-weight: 700;
@@ -901,6 +911,77 @@ START: Skincare Essentials CSS
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@media (max-width: 1399px) {
+  .tabs-mountain-item-wrap.preview-wrap {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .tabs-mountain-item .tabs-mountain-content .tabs-mountain-list tbody tr td span {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .tabs-mountain-item-wrap {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tabs-mountain-item-wrap.preview-wrap {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 991px) {
+  .tabs-mountain-item-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mountain-top-wrap .mountain-main-images {
+    padding: 50px 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-menu-area {
+    display: none;
+  }
+
+  .tabs-mountain-item-wrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .tabs-mountain-item-wrap.preview-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tabs-mountain-item .tabs-mountain-content .hide-text {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+
+  .tabs-mountain-item {
+    border-color: #FF8542;
+    box-shadow: 0px 14px 30px 0px #0000001C;
+  }
+
+  .mountain-top-wrap .mountain-main-images {
+    display: none;
+  }
+
+  .mountain-cart-sidebar {
+    max-width: 100%;
+  }
+
+  .tabs-mountain-item .tabs-mountain-content .tabs-mountain-list tbody tr td {
+    font-size: 14px;
+  }
+
+  .reload-btn {
+    padding: 11px 35px;
   }
 }
 
