@@ -329,6 +329,24 @@ ul {
   width: 100%;
 }
 
+.cart-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #121212;
+  background: #EAEAEA;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 20px 25px;
+  width: 100%;
+  line-height: 1;
+}
+
+.cart-btn span {
+  display: flex;
+}
+
 /**----------------------------------------
 START: Header CSS
 ----------------------------------------*/
