@@ -306,9 +306,9 @@ START: Header CSS
 .header-mountain-area {
   position: relative;
   background-color: #ffffff;
-  box-shadow: 0px 2px 2px 0px #00000012;
-  padding: 23px 0;
+  border-bottom: 5px solid #C6C0BD;
   transition: all 0.3s ease-in-out;
+  padding: 23px 0;
   z-index: 98;
 }
 
@@ -408,40 +408,45 @@ START: Feature CSS
 }
 
 .tabs-v2-main-wrapper .tabs-v2-images {
+  display: flex;
   width: 64%;
 }
 
 .tabs-v2-main-wrapper .tabs-v2-menu-wrap {
   width: 36%;
+  padding-left: 34px;
 }
 
 .tabs-v2-mountain-menu {
   display: flex;
   align-items: center;
   justify-content: start;
-  column-gap: 30px;
-  margin-bottom: 20px;
+  column-gap: 40px;
   white-space: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
-  scrollbar-color: #FF8542 #ffffff;
+  scrollbar-color: #C6C0BD #ffffff;
   scrollbar-width: thin;
+  padding-top: 26px;
+  padding-bottom: 14px;
 }
 
 .tabs-v2-mountain-menu li .tab-button {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
   position: relative;
   font-size: 15px;
   font-family: var(--sds-ff-heading);
   text-align: center;
 }
 
-.tabs-v2-mountain-menu li .tab-button.active {}
+.tabs-v2-mountain-menu li .tab-button span {
+  display: flex;
+}
 
-.tabs-v2-mountain-menu li .tab-button.active::after {
-  border-left: 20px solid #E09A73;
-  border-top: 22px solid transparent;
-  border-bottom: 22px solid transparent;
+.cart-item-wrap .cart-title {
+  margin-top: 18px;
 }
 
 /* !END: Feature CSS *
