@@ -505,6 +505,10 @@ START: Feature CSS
   height: 285px;
 }
 
+.mountain-v2-item-wrap.preview-wrap {
+  height: 738px;
+}
+
 .mountain-v2-item {
   display: flex;
   align-items: center;
