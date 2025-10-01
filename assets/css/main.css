@@ -328,6 +328,15 @@ START: Header CSS
   z-index: 98;
 }
 
+.header-mountain-area .page-width {
+  max-width: 1620px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .header-mountain-menu-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -421,9 +430,6 @@ START: Feature CSS
 ----------------------------------------*/
 .tabs-v2-main-wrapper {
   display: flex;
-  position: fixed;
-  right: 0;
-  height: calc(100vh - 79px);
 }
 
 .tabs-v2-main-wrapper .tabs-v2-images {
@@ -432,7 +438,9 @@ START: Feature CSS
 }
 
 .tabs-v2-main-wrapper .tabs-v2-images img {
+  height: 830px;
   width: 100%;
+  object-fit: cover;
 }
 
 .tabs-v2-main-wrapper .tabs-v2-menu-wrap {
@@ -513,6 +521,7 @@ START: Feature CSS
   display: flex;
   align-items: center;
   column-gap: 18px;
+  row-gap: 14px;
   border: 1px solid #0000001a;
   border-radius: 10px;
   padding: 6px 6px;
@@ -534,6 +543,7 @@ START: Feature CSS
   flex-direction: column;
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 .mountain-v2-item .mountain-v2-images a img {
@@ -716,6 +726,98 @@ START: Feature CSS
 
 .mountain-v2-item:nth-child(8) {
   animation: anim-8 0.9s ease-in-out 0s;
+}
+
+@media (max-width: 1899px) {
+  .tabs-v2-main-wrapper .tabs-v2-images img {
+    height: 820px;
+  }
+}
+
+@media (max-width: 1399px) {
+  .mountain-v2-price-infos {
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .tabs-v2-main-wrapper .tabs-v2-images {
+    width: 55%;
+  }
+
+  .tabs-v2-main-wrapper .tabs-v2-menu-wrap {
+    width: 45%;
+  }
+}
+
+@media (max-width: 1199px) {
+  .tabs-v2-main-wrapper .tabs-v2-images {
+    width: 45%;
+  }
+
+  .tabs-v2-main-wrapper .tabs-v2-menu-wrap {
+    width: 55%;
+  }
+
+  .mountain-v2-list-main .mountain-v2-content-box {
+    padding-left: 20px;
+  }
+
+  .tabs-v2-mountain-menu {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tabs-v2-main-wrapper .tabs-v2-images {
+    display: none;
+  }
+
+  .tabs-v2-main-wrapper .tabs-v2-menu-wrap {
+    width: 100%;
+  }
+
+  .tabs-v2-mountain-menu {
+    margin-left: 85px;
+  }
+
+  .mountain-v2-list-main .mountain-v2-content-box {
+    padding-left: 85px;
+  }
+
+  .shop-to-cart-button {
+    top: 0;
+    left: 0;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 575px) {
+  .mountain-v2-item {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .mountain-v2-item .mountain-v2-images {
+    max-width: 100%;
+  }
+
+  .mountain-v2-bottom-wrap {
+    flex-direction: column;
+  }
+
+  .mountain-v2-price-infos {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .mountain-v2-infos-list table tr td:nth-child(2) {
+    padding-left: 15px;
+  }
+
+  .mountain-v2-infos-list table tr td {
+    font-size: 14px;
+  }
 }
 
 /* products Keyframes CSS */
