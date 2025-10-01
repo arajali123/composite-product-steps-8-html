@@ -778,17 +778,21 @@ START: Feature CSS
   }
 
   .tabs-v2-mountain-menu {
-    margin-left: 85px;
+    margin-left: 0;
   }
 
   .mountain-v2-list-main .mountain-v2-content-box {
-    padding-left: 85px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .shop-to-cart-button {
-    top: 0;
-    left: 0;
-    transform: translateY(0);
+    display: none;
+  }
+
+  .tabs-mountain-v2-section .page-width {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
