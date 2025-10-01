@@ -818,6 +818,10 @@ START: Feature CSS
   .mountain-v2-infos-list table tr td {
     font-size: 14px;
   }
+
+  .cart-btn {
+    height: 50px;
+  }
 }
 
 /* products Keyframes CSS */
